@@ -19,8 +19,9 @@ public class checkbox {
              Iterator<WebElement>  iterator= option.iterator();
              while (iterator.hasNext()) {
                  WebElement fun = iterator.next();
-                 String text=fun.getText();
+                 String text=fun.getAttribute("value");
                  System.out.println(text);
+                 fun.click();
 //                 String val = fun.getAttribute("value");
 //                 if (val.equalsIgnoreCase("option-3")) {
 //                     fun.click();

@@ -23,6 +23,9 @@ public class iframes {
         String val =check.getText();
         System.out.println(val);
         check.click();
+        driver.switchTo().defaultContent();
+        WebElement allexamplebutton=driver.findElement(By.linkText("All Examples"));
+        allexamplebutton.click();
 
 //        WebElement box=driver.findElement(By.xpath("//input[@name='Topic']"));
 //        box.sendKeys("Hey man i am here ");

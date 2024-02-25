@@ -27,15 +27,10 @@ public class dropdowns {
            int size=alloption.size();
         System.out.println(alloption.size());
            for (int i=0; i<size; i++){
-
-                 String once =alloption.get(i).getText();
-                select.selectByIndex(i);
-
+               String once =alloption.get(i).getText();
+               select.selectByIndex(i);
                System.out.println(once);
-
            }
-
-
 
     }
 }
