@@ -1,5 +1,4 @@
 package Selenium01Two02Three03;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 public class PaginationExample {
 
     public static WebDriver driver;
@@ -48,18 +46,17 @@ public class PaginationExample {
         WebElement saveButton = driver.findElement(By.id("btnSave"));
         saveButton.click();
     }
-
     public static void deleteEmployee() {
         WebElement employeeList = driver.findElement(By.id("menu_pim_viewEmployeeList"));
         employeeList.click();
-        boolean isEmployeeFound = true;
-        while (isEmployeeFound) {
+        boolean flag = true;
+        while (flag) {
             List<WebElement> rows = driver.findElements(By.xpath("//table[@id='resultTable']/tbody/tr"));
             for (int i = 0; i < rows.size(); i++) {
                 WebElement employeeRow = rows.get(i);
                 String rowText = employeeRow.getText();
                 if (rowText.contains("John Doe")) { // Modify this condition according to your scenario
-                    isEmployeeFound = false;
+                    flag = false;
                     WebElement checkbox = driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr[" + (i + 1) + "]/td[1]"));
                     checkbox.click();
                     WebElement deleteButton = driver.findElement(By.id("btnDelete"));
@@ -69,7 +66,7 @@ public class PaginationExample {
                     break;
                 }
             }
-            if (isEmployeeFound) {
+            if (flag) {
                 WebElement nextPageButton = driver.findElement(By.linkText("Next"));
                 nextPageButton.click();
             }
