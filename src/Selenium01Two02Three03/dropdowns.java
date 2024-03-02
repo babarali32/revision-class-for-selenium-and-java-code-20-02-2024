@@ -15,7 +15,7 @@ public class dropdowns {
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://syntaxprojects.com/basic-select-dropdown-demo.php");
-           WebElement element=driver.findElement(By.id("select-demo"));
+        WebElement element=driver.findElement(By.id("select-demo"));
         Select select=new Select(element);
         select.selectByIndex(3);
         Thread.sleep(3000);
@@ -25,7 +25,7 @@ public class dropdowns {
 
            List<WebElement> alloption =select.getOptions();
            int size=alloption.size();
-        System.out.println(alloption.size());
+           System.out.println(alloption.size());
            for (int i=0; i<size; i++){
                String once =alloption.get(i).getText();
                select.selectByIndex(i);
