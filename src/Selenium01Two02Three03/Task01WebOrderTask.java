@@ -12,7 +12,7 @@ public class Task01WebOrderTask {
         WebDriver driver=new ChromeDriver();
         driver.navigate().to("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         driver.findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester");
-        driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("test");
+        driver.findElement(By.id("ctl00_MainContent_password")).sendKeys("Btest");
         driver.findElement(By.id("ctl00_MainContent_login_button")).click();
         String title=driver.getTitle();
         if(title.equals("Web Orders")){

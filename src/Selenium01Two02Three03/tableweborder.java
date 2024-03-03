@@ -16,7 +16,7 @@ public class tableweborder {
         WebElement user = driver.findElement(By.id("ctl00_MainContent_username"));
         user.sendKeys("Tester");
         WebElement password = driver.findElement(By.id("ctl00_MainContent_password"));
-        password.sendKeys("test");
+        password.sendKeys("Btest");
         WebElement button = driver.findElement(By.id("ctl00_MainContent_login_button"));
         button.click();
         List<WebElement> rows=driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']/tbody/tr"));

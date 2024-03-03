@@ -15,7 +15,7 @@ public class screenshots {
 
       driver.findElement(By.xpath("//input[contains(@id,'username')]")).sendKeys("Tester", Keys.TAB);
 
-      driver.findElement(By.xpath("//input[@type='password']")).sendKeys("test",Keys.ENTER);
+      driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Btest",Keys.ENTER);
 
         TakesScreenshot ts=(TakesScreenshot) driver;
         File photo  =ts.getScreenshotAs(OutputType.FILE);

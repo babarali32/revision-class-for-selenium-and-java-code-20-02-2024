@@ -14,7 +14,7 @@ public class commands {
         WebElement username=driver.findElement(By.cssSelector("input[name$='username']"));
         username.sendKeys("Tester");
         WebElement password= driver.findElement(By.id("ctl00_MainContent_password"));
-        password.sendKeys("test");
+        password.sendKeys("Btest");
         WebElement button=driver.findElement(By.id("ctl00_MainContent_login_button"));
         button.click();
         Thread.sleep(4000);

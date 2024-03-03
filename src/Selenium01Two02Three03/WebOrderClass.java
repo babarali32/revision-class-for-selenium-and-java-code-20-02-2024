@@ -23,7 +23,7 @@ public class WebOrderClass {
 
        WebElement password= name.findElement(By.id("ctl00_MainContent_password"));
 
-       password.sendKeys("test");  // this is because we can  use it again and agian.
+       password.sendKeys("Btest");  // this is because we can  use it again and agian.
 
         WebElement button=name.findElement(By.id("ctl00_MainContent_login_button"));
 

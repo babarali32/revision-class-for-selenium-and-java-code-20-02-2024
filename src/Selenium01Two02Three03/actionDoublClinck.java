@@ -18,12 +18,11 @@ public class actionDoublClinck {
         actions.contextClick(rightclick).perform();
         WebElement edit=driver.findElement(By.xpath("//span[text()='Edit']"));
         actions.click(edit).build().perform();
-          Alert aalrt=driver.switchTo().alert();
-         aalrt.accept();
-         WebElement doubleclick=driver.findElement(By.xpath("//button[@ondblclick='myFunction()']"));
-         actions.doubleClick(doubleclick).build().perform();
-         Alert secondalert=driver.switchTo().alert();
-         secondalert.accept();
-
+        Alert aalrt=driver.switchTo().alert();
+        aalrt.accept();
+        WebElement doubleclick=driver.findElement(By.xpath("//button[@ondblclick='myFunction()']"));
+        actions.doubleClick(doubleclick).build().perform();
+        Alert secondalert=driver.switchTo().alert();
+        secondalert.accept();
     }
 }
